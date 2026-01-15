@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sacred Calendars & Faith - Explore Sacred Time Across Cultures</title>
+    <meta name="description" content="Discover Hebrew, Ethiopian, and prophetic calendars. Study sacred time through religious perspectives with bilingual support (English/French).">
+    <meta name="keywords" content="sacred calendars, Hebrew calendar, Ethiopian calendar, biblical feasts, prophetic chronology, faith app">
+    <link rel="icon" type="image/png" href="icon.png">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="Sacred Calendars & Faith">
+    <meta property="og:description" content="Explore sacred calendars from Hebrew, Ethiopian, and prophetic traditions.">
+    <meta property="og:image" content="feature_graphic.png">
+    <meta property="og:type" content="website">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --navy: #1E3A5F;
+            --navy-dark: #0F1F33;
+            --gold: #D4AF37;
+            --gold-light: #F4E4BC;
+            --purple: #4A2C6A;
+            --white: #FFFFFF;
+            --gray-light: #F5F5F5;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Lora', Georgia, serif;
+            color: var(--navy-dark);
+            line-height: 1.7;
+            background: var(--white);
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Cinzel', serif;
+            font-weight: 600;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--navy) 0%, var(--purple) 50%, var(--navy-dark) 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="1" fill="%23D4AF37" opacity="0.3"/><circle cx="80" cy="40" r="0.5" fill="%23D4AF37" opacity="0.4"/><circle cx="40" cy="70" r="0.8" fill="%23D4AF37" opacity="0.3"/><circle cx="90" cy="80" r="0.6" fill="%23D4AF37" opacity="0.5"/><circle cx="10" cy="60" r="0.7" fill="%23D4AF37" opacity="0.3"/><circle cx="60" cy="10" r="0.5" fill="%23D4AF37" opacity="0.4"/></svg>');
+            background-size: 200px 200px;
+            opacity: 0.5;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 900px;
+        }
+        
+        .app-icon {
+            width: 150px;
+            height: 150px;
+            border-radius: 30px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+            margin-bottom: 2rem;
+            border: 3px solid var(--gold);
+        }
+        
+        .hero h1 {
+            color: var(--gold);
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .hero .tagline {
+            color: var(--gold-light);
+            font-size: 1.4rem;
+            margin-bottom: 2rem;
+            font-style: italic;
+        }
+        
+        .hero .subtitle {
+            color: var(--white);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto 2.5rem;
+            opacity: 0.9;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-family: 'Cinzel', serif;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary {
+            background: var(--gold);
+            color: var(--navy-dark);
+        }
+        
+        .btn-primary:hover {
+            background: var(--gold-light);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.4);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid var(--gold);
+        }
+        
+        .btn-secondary:hover {
+            background: var(--gold);
+            color: var(--navy-dark);
+        }
+        
+        /* Features Section */
+        .features {
+            padding: 6rem 2rem;
+            background: var(--gray-light);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            text-align: center;
+            color: var(--navy);
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            color: var(--purple);
+            font-size: 1.1rem;
+            margin-bottom: 4rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .feature-card {
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+            border-top: 4px solid var(--gold);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .feature-card h3 {
+            color: var(--navy);
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+        }
+        
+        .feature-card p {
+            color: #666;
+            font-size: 1rem;
+        }
+        
+        /* Calendars Section */
+        .calendars {
+            padding: 6rem 2rem;
+            background: linear-gradient(180deg, var(--white) 0%, var(--gray-light) 100%);
+        }
+        
+        .calendar-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .calendar-card {
+            background: var(--white);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .calendar-card:hover {
+            transform: scale(1.03);
+        }
+        
+        .calendar-header {
+            padding: 2rem;
+            color: var(--white);
+            text-align: center;
+        }
+        
+        .calendar-card:nth-child(1) .calendar-header {
+            background: linear-gradient(135deg, #1E3A5F, #2E5A8F);
+        }
+        
+        .calendar-card:nth-child(2) .calendar-header {
+            background: linear-gradient(135deg, #2D5016, #4A8029);
+        }
+        
+        .calendar-card:nth-child(3) .calendar-header {
+            background: linear-gradient(135deg, #4A2C6A, #6B4190);
+        }
+        
+        .calendar-header h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .calendar-body {
+            padding: 2rem;
+        }
+        
+        .calendar-body ul {
+            list-style: none;
+        }
+        
+        .calendar-body li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .calendar-body li::before {
+            content: '✦';
+            color: var(--gold);
+        }
+        
+        /* Screenshots Section */
+        .screenshots {
+            padding: 6rem 2rem;
+            background: var(--navy);
+            color: var(--white);
+        }
+        
+        .screenshots .section-title {
+            color: var(--gold);
+        }
+        
+        .screenshots .section-subtitle {
+            color: var(--gold-light);
+        }
+        
+        .screenshot-gallery {
+            display: flex;
+            gap: 1.5rem;
+            overflow-x: auto;
+            padding: 2rem 0;
+            scroll-snap-type: x mandatory;
+        }
+        
+        .screenshot-gallery img {
+            width: 250px;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+            scroll-snap-align: center;
+            border: 3px solid var(--gold);
+        }
+        
+        /* About Section */
+        .about {
+            padding: 6rem 2rem;
+            background: var(--white);
+        }
+        
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        
+        .about-text h2 {
+            color: var(--navy);
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .about-text p {
+            color: #555;
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+        
+        .about-image {
+            text-align: center;
+        }
+        
+        .about-image img {
+            max-width: 100%;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+        }
+        
+        /* Download Section */
+        .download {
+            padding: 6rem 2rem;
+            background: linear-gradient(135deg, var(--navy) 0%, var(--purple) 100%);
+            text-align: center;
+            color: var(--white);
+        }
+        
+        .download h2 {
+            color: var(--gold);
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .download p {
+            color: var(--gold-light);
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .store-badges {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .store-badge {
+            height: 60px;
+            transition: transform 0.3s ease;
+        }
+        
+        .store-badge:hover {
+            transform: scale(1.05);
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--navy-dark);
+            color: var(--white);
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+        
+        footer a {
+            color: var(--gold);
+            text-decoration: none;
+        }
+        
+        footer a:hover {
+            text-decoration: underline;
+        }
+        
+        .footer-links {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .copyright {
+            color: #888;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero .tagline {
+                font-size: 1.1rem;
+            }
+            
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <img src="icon.png" alt="Sacred Calendars & Faith App Icon" class="app-icon">
+            <h1>Sacred Calendars & Faith</h1>
+            <p class="tagline">Hebrew • Ethiopian • Prophetic</p>
+            <p class="subtitle">
+                Explore sacred time through the lens of world religions. Discover Hebrew months, 
+                Ethiopian traditions, biblical feasts, and prophetic chronology — all in one beautifully designed app.
+            </p>
+            <div class="cta-buttons">
+                <a href="#download" class="btn btn-primary">
+                    📱 Download Now
+                </a>
+                <a href="#features" class="btn btn-secondary">
+                    ✨ Explore Features
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <h2 class="section-title">Why Sacred Calendars?</h2>
+            <p class="section-subtitle">
+                Understanding sacred time connects us to ancient wisdom and deepens our spiritual journey.
+            </p>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">📅</div>
+                    <h3>Multiple Calendar Systems</h3>
+                    <p>Study Hebrew, Ethiopian, and Essene calendars side by side. Understand how different cultures measure sacred time.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🕎</div>
+                    <h3>Biblical Feasts</h3>
+                    <p>Learn about Passover, Pentecost, Tabernacles, and all seven major Jewish festivals with their spiritual significance.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🌍</div>
+                    <h3>Bilingual Support</h3>
+                    <p>Toggle between English and French with one tap. The entire app translates instantly for global accessibility.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📖</div>
+                    <h3>Faith Library</h3>
+                    <p>Access "Doubts and Discoveries" — a comprehensive guide for navigating common questions in your faith journey.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💬</div>
+                    <h3>Community</h3>
+                    <p>Join a community of believers. Share insights, ask questions, and engage with others studying sacred calendars.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔮</div>
+                    <h3>Prophetic Chronology</h3>
+                    <p>Explore biblical timeline analysis, messianic calculations, and eschatological studies from scholarly sources.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Calendars Section -->
+    <section class="calendars" id="calendars">
+        <div class="container">
+            <h2 class="section-title">Explore Sacred Calendars</h2>
+            <p class="section-subtitle">
+                Three ancient calendar traditions, each with unique wisdom about sacred time.
+            </p>
+            <div class="calendar-cards">
+                <div class="calendar-card">
+                    <div class="calendar-header">
+                        <h3>🕎 Hebrew Calendar</h3>
+                        <p>Lunisolar tradition</p>
+                    </div>
+                    <div class="calendar-body">
+                        <ul>
+                            <li>12 months with leap year additions</li>
+                            <li>Nissan to Adar cycle</li>
+                            <li>Sabbath and festival calculations</li>
+                            <li>Gregorian date equivalents</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="calendar-card">
+                    <div class="calendar-header">
+                        <h3>🇪🇹 Ethiopian Calendar</h3>
+                        <p>Coptic Christian tradition</p>
+                    </div>
+                    <div class="calendar-body">
+                        <ul>
+                            <li>13 months (12 + Pagume)</li>
+                            <li>Amharic month names</li>
+                            <li>Enkutatash (New Year) traditions</li>
+                            <li>7-8 years behind Gregorian</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="calendar-card">
+                    <div class="calendar-header">
+                        <h3>📜 Essene Calendar</h3>
+                        <p>Ancient solar tradition</p>
+                    </div>
+                    <div class="calendar-body">
+                        <ul>
+                            <li>364-day solar year</li>
+                            <li>Perfectly divisible by 7</li>
+                            <li>Dead Sea Scrolls connection</li>
+                            <li>Fixed feast days</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>About This App</h2>
+                    <p>
+                        <strong>Sacred Calendars & Faith</strong> was created to help believers and seekers 
+                        understand how different religious traditions measure and sanctify time.
+                    </p>
+                    <p>
+                        The app includes content from "Prophetic and Eschatological Chronology" by 
+                        Evangelist Elisée Tshombe Kajingu, as well as the book "Doubts and Discoveries: 
+                        Navigating Common Questions in Your Faith Journey."
+                    </p>
+                    <p>
+                        Whether you're a Bible student, theologian, or simply curious about sacred 
+                        traditions, this app provides a comprehensive resource for your spiritual journey.
+                    </p>
+                </div>
+                <div class="about-image">
+                    <img src="feature_graphic.png" alt="Sacred Calendars & Faith Feature Graphic">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Download Section -->
+    <section class="download" id="download">
+        <div class="container">
+            <h2>Download Now</h2>
+            <p>Begin your journey through sacred time. Available on Android.</p>
+            <div class="store-badges">
+                <a href="https://play.google.com/store/apps/details?id=space.manus.prophetic.chronology.app" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" 
+                         alt="Get it on Google Play" class="store-badge">
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="footer-links">
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms of Service</a>
+            <a href="mailto:support@sacredcalendars.app">Contact Us</a>
+        </div>
+        <p class="copyright">
+            © 2025 Sacred Calendars & Faith. All rights reserved.<br>
+            "He who testifies these things says: Yes, I am coming soon." — Revelation 22:20
+        </p>
+    </footer>
+</body>
+</html>
